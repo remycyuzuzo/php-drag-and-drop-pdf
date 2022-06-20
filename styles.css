@@ -1,0 +1,51 @@
+body {
+    font-family: Roboto, sans-serif;
+  }
+  
+.dragging {
+    background-color: rgb(50, 163, 50);
+    color: #ffffff;
+}
+  
+  button, input {
+    font-family: inherit;
+  }  
+  a {
+    color: blue;
+  }  
+  .drop-area-container {    
+    border-radius: 20px;
+    border: 2px #777777 dashed;
+    width: fit-content;
+  }
+  .drop_area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 400px;
+    height: 230px;
+  }
+  .preview {
+    display: flex;
+  }
+  .preview * {
+    padding: 10px 6px;
+  }
+  .preview img{
+    height: 50px;
+  }
+  .container {
+    max-width: 700px;
+    margin: 20px auto;
+  }
+
+  form .submit {
+    padding: 10px 1.6em;
+    border-radius: 4px;
+    border: none;
+    background-color: rgb(28, 28, 184);
+    color: #ffffff;
+    margin-top: 1em;
+    cursor: pointer;
+  }
