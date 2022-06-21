@@ -8,7 +8,7 @@ $database = "first";
 $conn = mysqli_connect($server, $dbuser, $dbpass, $database);
 
 if (!$conn) {
-    die("<script>alert('Connection Failed.')</script>");
+    die("<div style='padding: 10px 30px; background-color: #777777; color: #ffffff; border-radius: 10px;'>
+        <strong>Database Error</strong> The system couldn't connect to the database server
+    </div>");
 }
-
-$base_url = "http://localhost/File%20Upload%20&%20Download%20Using%20PHP%20&%20MySQL/source%20file/"; // Website url

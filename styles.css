@@ -6,6 +6,9 @@ body {
     background-color: rgb(50, 163, 50);
     color: #ffffff;
 }
+.dragging-error {
+  background-color: rgb(230, 169, 169);
+}
   
   button, input {
     font-family: inherit;
@@ -48,4 +51,41 @@ body {
     color: #ffffff;
     margin-top: 1em;
     cursor: pointer;
+  }
+
+  .files {
+    padding: 1em;
+    margin-top: 2em;
+    background-color: #dddcdc;
+  }
+  .file {
+    display: flex;
+    align-items: center;
+    margin-bottom: .6em;
+    background-color: #f2f2f2;
+    padding: 4px;
+    border-radius: 20px;
+  }
+  .thumb .img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .thumb .img img {
+    width: 20px;
+    height: 20px;
+  }
+  .file .desc {
+    padding: 0 10px;
+  }
+  .file .desc a[download] {
+    background-color: rgb(166, 204, 166);
+    color: #1f7e16;
+    padding: 4px 10px;
+    border-radius: 4px;
   }
