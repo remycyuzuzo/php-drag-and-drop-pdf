@@ -1,72 +1,101 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 body {
     font-family: Roboto, sans-serif;
-  }
-  
+    background-color: #f2f2f2;
+}
+
 .dragging {
-    background-color: rgb(50, 163, 50);
-    color: #ffffff;
+    background-color: rgb(154, 235, 154);
+    color: #2b2a2a;
 }
+
 .dragging-error {
-  background-color: rgb(230, 169, 169);
+    background-color: rgb(230, 169, 169);
 }
-  
-  button, input {
-    font-family: inherit;
-  }  
-  a {
-    color: blue;
-  }  
-  .drop-area-container {    
+
+a {
+    color: rgb(54, 54, 136);
+    text-decoration: none;
+    transition: 0.3s ease-out;
+}
+
+.drop-area-container {
     border-radius: 20px;
-    border: 2px #777777 dashed;
-    width: fit-content;
-  }
-  .drop_area {
+    border: 2px #2b2679 dashed;
+    overflow: hidden;
+}
+
+.drop_area {
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    width: 400px;
     height: 230px;
-  }
-  .preview {
-    display: flex;
-  }
-  .preview * {
-    padding: 10px 6px;
-  }
-  .preview img{
-    height: 50px;
-  }
-  .container {
-    max-width: 700px;
-    margin: 20px auto;
-  }
+    transition: all .4s ease-in-out;
+}
 
-  form .submit {
+.drop_area.hidden {
+    height: 0;
+    overflow: hidden;
+}
+
+.file-list-item {
+    display: flex;
+    align-items: flex-start;
+}
+
+.preview * {
+    padding: 10px 6px;
+}
+
+.preview img {
+    height: 50px;
+}
+
+.files-container {
+    background-color: #ffffff;
+}
+
+form .submit {
     padding: 10px 1.6em;
     border-radius: 4px;
     border: none;
     background-color: rgb(28, 28, 184);
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, .4);
     color: #ffffff;
-    margin-top: 1em;
     cursor: pointer;
-  }
+    transition: 0.5s;
+}
 
-  .files {
-    padding: 1em;
+.files {
+    padding: 1em 0;
     margin-top: 2em;
-    background-color: #dddcdc;
-  }
-  .file {
+}
+
+.file {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     margin-bottom: .6em;
     background-color: #f2f2f2;
     padding: 4px;
     border-radius: 20px;
-  }
-  .thumb .img {
+}
+
+.form {
+    padding: 1em;
+    background-color: #ffffff;
+    border-radius: 7px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
+}
+
+.thumb .img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -75,17 +104,84 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-  }
-  .thumb .img img {
+}
+
+.thumb .img img {
     width: 20px;
     height: 20px;
-  }
-  .file .desc {
+}
+
+.file .desc {
     padding: 0 10px;
-  }
-  .file .desc a[download] {
-    background-color: rgb(166, 204, 166);
-    color: #1f7e16;
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.file .desc .links {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.file .desc a[download] {
+    background-color: #1b2158;
+    color: #ffffff;
     padding: 4px 10px;
     border-radius: 4px;
-  }
+}
+
+.text {
+    padding: 10px;
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    border: 2px solid #777777;
+    border-radius: 4px;
+}
+
+.close-btn {
+    color: #777777;
+    text-decoration: none;
+    font-size: 18px;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+.pdf-preview {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .3);
+    z-index: 999;
+    padding: 16px;
+}
+.pdf-preview.hidden {
+    display: none;
+}
+.pdf-preview .header {
+    text-align: right;
+}
+.pdf-preview a.close {
+    color: #ffffff;
+    font-size: 2em;
+}
+.pdf-preview .preview-area embed {
+    height: 600px!important;
+}
+
+.nav-menu .navigation {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .3);
+}
+.nav-menu .navigation .logo {
+    padding: 0 16px;
+}
+.nav-menu .navigation .user-box {
+    padding: 0 16px;
+}

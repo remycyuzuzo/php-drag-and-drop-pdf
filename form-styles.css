@@ -1,0 +1,68 @@
+.container {
+    max-width: 400px;
+}
+.head {
+    font-family: Roboto, sans-serif;
+    padding: 16px;
+    -webkit-box-shadow: 2px 3px 8px #ccc;
+    -moz-box-shadow: 2px 3px 8px #ccc;
+    box-shadow: 2px 3px 8px #ccc;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.input input {
+    padding: 10px .6em;
+    margin-top: 10px;
+    border-radius: 50px;
+    width: 100%;
+}
+
+.input1 {
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid rgb(245, 245, 245);
+    border-radius: 5px;
+    border-radius: 50px;
+    -webkit-box-shadow: 2px 3px 8px #ccc;
+    -moz-box-shadow: 2px 3px 8px #ccc;
+    box-shadow: 2px 3px 8px #ccc;
+}
+
+.input2 {
+    padding: 10px;
+    margin-top: 2em;
+    border: 2px solid rgb(223, 223, 223);
+    border-radius: 5px;
+    border-radius: 50px;
+}
+
+.button1 {
+    font-family: Roboto, sans-serif;
+    padding: 10px .6em;
+    color: white;
+    background-color: blue;
+    font-weight: bolder;
+    cursor: pointer;
+    border-radius: 50px;
+    width: 100%;
+    -webkit-box-shadow: 2px 3px 8px #ccc;
+    -moz-box-shadow: 2px 3px 8px #ccc;
+    box-shadow: 2px 3px 8px #ccc;
+}
+
+.new {
+    font-family: Roboto, sans-serif;
+    padding: 0.7em;
+}
+
+.label4 {
+    font-family: Roboto, sans-serif;
+    padding: 1em;
+    color: blue;
+    text-decoration: solid;
+    font-weight: bolder;
+    cursor: pointer;
+    border-radius: 50px;
+    width: 200px;
+}
